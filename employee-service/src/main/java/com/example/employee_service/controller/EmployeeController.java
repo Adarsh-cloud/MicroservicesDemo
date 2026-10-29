@@ -21,7 +21,7 @@ public class EmployeeController {
 
     @GetMapping("/employees/{id}")
     public ResponseEntity<EmployeeDTOResponse> getEmployeeById(@PathVariable Integer id) {
-        return new ResponseEntity<>(employeeService.getEmployeeById(id), HttpStatus.OK);
+        return new ResponseEntity<>(employeeService.getEmployeeByIdV2(id), HttpStatus.OK);
     }
     @PostMapping("/employees")
     public ResponseEntity<EmployeeDTO> createEmployee(@RequestBody EmployeeDTO employeeDTO){
